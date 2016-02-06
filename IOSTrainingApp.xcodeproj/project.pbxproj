@@ -51,6 +51,7 @@
 		0760091E1C6610190038C546 /* IOSTrainingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSTrainingAppUITests.swift; sourceTree = "<group>"; };
 		076009201C6610190038C546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0760092C1C6612230038C546 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewController.swift; path = Views/MainTableViewController.swift; sourceTree = "<group>"; };
+		0760092E1C665AC10038C546 /* IOSTrainingApp 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "IOSTrainingApp 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,9 +516,10 @@
 		076009021C6610180038C546 /* IOSTrainingApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				0760092E1C665AC10038C546 /* IOSTrainingApp 2.xcdatamodel */,
 				076009031C6610180038C546 /* IOSTrainingApp.xcdatamodel */,
 			);
-			currentVersion = 076009031C6610180038C546 /* IOSTrainingApp.xcdatamodel */;
+			currentVersion = 0760092E1C665AC10038C546 /* IOSTrainingApp 2.xcdatamodel */;
 			path = IOSTrainingApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
