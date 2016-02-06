@@ -15,6 +15,7 @@
 		076009091C6610180038C546 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076009071C6610180038C546 /* LaunchScreen.storyboard */; };
 		076009141C6610190038C546 /* IOSTrainingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076009131C6610190038C546 /* IOSTrainingAppTests.swift */; };
 		0760091F1C6610190038C546 /* IOSTrainingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760091E1C6610190038C546 /* IOSTrainingAppUITests.swift */; };
+		0760092D1C6612230038C546 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760092C1C6612230038C546 /* MainTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0760091A1C6610190038C546 /* IOSTrainingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSTrainingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0760091E1C6610190038C546 /* IOSTrainingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSTrainingAppUITests.swift; sourceTree = "<group>"; };
 		076009201C6610190038C546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0760092C1C6612230038C546 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewController.swift; path = Views/MainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				076009071C6610180038C546 /* LaunchScreen.storyboard */,
 				0760090A1C6610180038C546 /* Info.plist */,
 				076009021C6610180038C546 /* IOSTrainingApp.xcdatamodeld */,
+				0760092C1C6612230038C546 /* MainTableViewController.swift */,
 			);
 			path = IOSTrainingApp;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0760092D1C6612230038C546 /* MainTableViewController.swift in Sources */,
 				076008FE1C6610180038C546 /* ViewController.swift in Sources */,
 				076008FC1C6610180038C546 /* AppDelegate.swift in Sources */,
 				076009041C6610180038C546 /* IOSTrainingApp.xcdatamodeld in Sources */,
