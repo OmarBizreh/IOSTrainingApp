@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d6p-FN-JeV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EID-qW-sRm">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -32,7 +33,77 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bdp-mn-Bsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="674" y="383"/>
+            <point key="canvasLocation" x="2002" y="900"/>
+        </scene>
+        <!--Drawer Controller-->
+        <scene sceneID="AHf-hT-dQ0">
+            <objects>
+                <viewController id="EID-qW-sRm" customClass="KYDrawerController" customModule="KYDrawerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wWt-pn-INw"/>
+                        <viewControllerLayoutGuide type="bottom" id="u68-KZ-J7i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b7s-Ln-hBe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="mainSegueIdentifier" value="main"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="drawerWidth">
+                            <real key="value" value="320"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="drawerSegueIdentifier" value="drawer"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="d6p-FN-JeV" kind="custom" identifier="main" customClass="KYEmbedMainControllerSegue" customModule="KYDrawerController" id="RE0-vH-O6x"/>
+                        <segue destination="32q-UZ-SJQ" kind="custom" identifier="drawer" customClass="KYEmbedDrawerControllerSegue" customModule="KYDrawerController" id="aPa-BP-WJQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="elO-8m-sXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="753"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jjo-52-r9z">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMI-xv-Zr3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="32q-UZ-SJQ" customClass="ViewController" customModule="IOSTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xUA-Wk-mUY"/>
+                        <viewControllerLayoutGuide type="bottom" id="oTX-xQ-GEi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t08-Gv-fCm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DFB-fS-Tl0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="153"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MNT-TA-Jkt">
+                                <rect key="frame" x="0.0" y="153" width="600" height="447"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oTX-xQ-GEi" firstAttribute="top" secondItem="MNT-TA-Jkt" secondAttribute="bottom" id="Hd6-4e-iNT"/>
+                            <constraint firstItem="DFB-fS-Tl0" firstAttribute="top" secondItem="t08-Gv-fCm" secondAttribute="topMargin" id="PKR-RY-Whf"/>
+                            <constraint firstItem="MNT-TA-Jkt" firstAttribute="top" secondItem="DFB-fS-Tl0" secondAttribute="bottom" id="TPw-1F-Gt1"/>
+                            <constraint firstItem="MNT-TA-Jkt" firstAttribute="leading" secondItem="t08-Gv-fCm" secondAttribute="leadingMargin" constant="-20" id="ZOP-uA-d1A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MNT-TA-Jkt" secondAttribute="trailing" constant="-20" id="fM2-MB-PnA"/>
+                            <constraint firstItem="DFB-fS-Tl0" firstAttribute="leading" secondItem="t08-Gv-fCm" secondAttribute="leadingMargin" constant="-20" id="gaT-6L-5h7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DFB-fS-Tl0" secondAttribute="trailing" constant="-20" id="iyJ-Za-7pP"/>
+                            <constraint firstItem="MNT-TA-Jkt" firstAttribute="top" secondItem="DFB-fS-Tl0" secondAttribute="bottom" id="zAv-9b-LyQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viewHeader" destination="DFB-fS-Tl0" id="9Ne-CI-fce"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="992" y="292"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xm8-2v-ZQr">
@@ -48,7 +119,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MY2-u9-cp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146" y="383"/>
+            <point key="canvasLocation" x="1158" y="986"/>
         </scene>
     </scenes>
 </document>
