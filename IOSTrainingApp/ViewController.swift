@@ -48,7 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)
         if indexPath.section == 0 {
-            cell?.textLabel?.text = "Hellow World"
+            cell?.textLabel?.text = "Hello World"
         }
         else{
             cell?.textLabel?.text = "Hello World"
