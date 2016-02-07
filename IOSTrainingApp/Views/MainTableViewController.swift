@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreSpotlight
+import MobileCoreServices
 import CoreData
 
 class MainTableViewController: UITableViewController, UISearchResultsUpdating {
@@ -63,6 +65,27 @@ class MainTableViewController: UITableViewController, UISearchResultsUpdating {
     }
     
     
+    func indexData(){
+        if CSSearchableIndex.isIndexingAvailable() {
+            // Create attribute set and set itemContentType to String
+            let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
+            attributeSet.title = (self.people[self.people.count - 1].valueForKey("name") as! String)
+            attributeSet.contentDescription = "Index from IOSTrainingApp"
+            
+            let item = CSSearchableItem(uniqueIdentifier: "1", domainIdentifier: "com.IOSTrainingApp", attributeSet: attributeSet)
+            item.expirationDate = NSDate.distantFuture()
+            CSSearchableIndex.defaultSearchableIndex().indexSearchableItems([item]) { (error: NSError?) -> Void in
+                if let mError = error{
+                    print("Error indexing: \(mError)")
+                }else{
+                    print("Successfully Indexed item")
+                }
+            }
+
+        }
+    }
+    
+    
     func loadData(){
         self.fetchPersons()
     }
@@ -74,6 +97,7 @@ class MainTableViewController: UITableViewController, UISearchResultsUpdating {
             // self.Names.append(textField!.text!)
             self.saveName(textField!.text!)
             self.tableView.reloadData()
+            self.indexData()
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default) { (action:UIAlertAction) -> Void in
             
